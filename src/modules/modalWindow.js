@@ -26,11 +26,14 @@ const modalWindow = () => {
         }
     });
 
-    fixedGift.addEventListener('click', () => {
-        openFormModal('#gift');
-        fixedGift.style.display = 'none';
-    });
-
+    try {
+        fixedGift.addEventListener('click', () => {
+            openFormModal('#gift');
+            fixedGift.style.display = 'none';
+        });
+    } catch (e) {
+        console.error('нет подарка');
+    }
 }
 
 export default modalWindow;
