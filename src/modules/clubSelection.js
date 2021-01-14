@@ -1,14 +1,22 @@
 const clubSelection = () => {
-    const clubSelect = document.querySelector('.club-select'),
-        clubSelectUl = document.querySelector('.clubs-list>ul');
+    const clubSelectUl = document.querySelector('.clubs-list>ul');
 
-    clubSelect.addEventListener('click', () => {
+    const openClubSelect = () => {
         if (!clubSelectUl.style.cssText) {
             clubSelectUl.style.display = 'inline';
         } else {
             clubSelectUl.style.display = '';
         }
+    };
+
+    document.body.addEventListener('click', (event) => {
+        if (event.target.closest('.club-select')) {
+            openClubSelect();
+        } else {
+            clubSelectUl.style.display = '';
+        }
     });
+
 }
 
 export default clubSelection;
