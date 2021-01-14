@@ -2,6 +2,7 @@ const modalWindow = () => {
     const headerMain = document.querySelector('.header-main'),
         fixedGift = document.querySelector('.fixed-gift');
 
+
     const openFormModal = (id) => {
         const idForm = document.querySelector(id);
 
@@ -10,6 +11,7 @@ const modalWindow = () => {
         idForm.addEventListener('click', (event) => {
             if (event.target.closest('.close-form')) idForm.style.display = '';
             if (event.target.closest('.overlay')) idForm.style.display = '';
+            if (event.target.closest('.close-btn')) idForm.style.display = '';
         });
     }
 
