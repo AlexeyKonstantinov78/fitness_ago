@@ -1,5 +1,6 @@
 const modalWindow = () => {
-    const headerMain = document.querySelector('.header-main');
+    const headerMain = document.querySelector('.header-main'),
+        fixedGift = document.querySelector('.fixed-gift');
 
     const openFormModal = (id) => {
         const idForm = document.querySelector(id);
@@ -21,6 +22,11 @@ const modalWindow = () => {
         if (target.closest('.callback-btn')) {
             openFormModal(target.dataset.popup);
         }
+    });
+
+    fixedGift.addEventListener('click', () => {
+        openFormModal('#gift');
+        fixedGift.style.display = 'none';
     });
 
 }
