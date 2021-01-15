@@ -14,11 +14,9 @@ const slider = () => {
             mainSlider[index].style.display = '';
         }
 
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                changeSlider(index);
-            }, 3000);
-        });
+        setTimeout(() => {
+            changeSlider(index);
+        }, 3000);
     }
 
     mainSlider.forEach((item, index) => {
