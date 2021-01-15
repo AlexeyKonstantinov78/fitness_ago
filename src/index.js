@@ -5,6 +5,7 @@ import modalWindow from "./modules/modalWindow";
 import scrollWindow from "./modules/scrollWindow";
 import slider from "./modules/slider";
 import photoGallery from "./modules/photoGallery";
+import carousel from "./modules/carousel";
 
 //выпадающее меню выбор клуба
 clubSelection();
@@ -19,4 +20,7 @@ scrollWindow();
 slider();
 
 // Фотогалерея
-photoGallery(); 
+photoGallery();
+
+// карусель 
+carousel();
