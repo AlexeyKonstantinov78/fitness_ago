@@ -1606,6 +1606,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider {
+    position: relative;
     padding-left: 75px;
     padding-right: 75px;
     max-width: 900px;
@@ -1614,8 +1615,20 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider .slide {
-    margin: 0 auto !important;
-    width: 100%
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    display: overlov;
+    display: none;    
+}
+
+#gallery .gallery-slider .slide-active{
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    display: inline;
 }
 
 #gallery .gallery-slider .slider-arrow {
@@ -1636,18 +1649,59 @@ nav.popup-menu .close-menu-btn img {
     padding-top: 11px
 }
 
+#gallery .gallery-slider .slider-arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background-color: #f4c71b;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    border-radius: 50%
+}
+
 #gallery .gallery-slider .slider-arrow.prev {
-    left: 0
+    background-image: url(../images/arrow-left.png);
+    left: 0;
+    background-position: 45% 50%
 }
 
 #gallery .gallery-slider .slider-arrow.next {
-    right: 0
+    background-image: url(../images/arrow-right.png);
+    right: 0;
+    background-position: 55% 50%
 }
 
 #gallery .gallery-slider .slider-dots {
+    position: absolute;
+    bottom: 5%;
     left: 50%;
-    margin-left: -65px;
-    bottom: 5%
+    margin-left: -65px
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 5
+}
+
+#gallery .gallery-slider .slider-dots .dot{
+    cursor: pointer;
+    width: 25px;
+    margin: 0 2px;
+    border: 3px solid #fff;
+    display: inline-block;
+    -webkit-transition: background-color, -webkit-transform .4s;
+    transition: background-color, transform .4s, -webkit-transform .4s
+}
+
+#gallery .gallery-slider .slider-dots li.dot.dot-active{
+    border: 3px solid #f4c71b;    
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2) 
 }
 
 #cards {
