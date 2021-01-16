@@ -3,34 +3,26 @@ const carousel = () => {
         caruselSlider = document.querySelector('.carusel-slider');
 
     let count = 0;
-    //servicesSlider.style.transform = `translateX(${count}%)`;
 
-    const next = (index = 0) => {
-        if (count > 100) count = 0;
-        if (count < 0) count = 100;
+    const next = (index) => {
+        if (count === 100) count = 0;
         count += index;
-        console.log(count);
-
         servicesSlider.style.transform = `translateX(-${count}%)`;
     };
 
+    const prev = (index) => {
 
-    //console.log(servicesSlider);
+        if (count === 0) count = 100;
+        count += index;
+        servicesSlider.style.transform = `translateX(-${count}%)`;
+    };
 
-    // slide.forEach((item) => {
-    //     console.log(item);
-
-    // });
     caruselSlider.addEventListener('click', (event) => {
 
-        if (event.target.closest('.slider-arrow.prev')) {
-            console.log('лево');
-            next(-20);
-        }
-        if (event.target.closest('.slider-arrow.next')) {
-            console.log('право');
-            next(20);
-        }
+        if (event.target.closest('.slider-arrow.prev')) prev(-20);
+
+        if (event.target.closest('.slider-arrow.next')) next(20);
+
     });
 }
 
