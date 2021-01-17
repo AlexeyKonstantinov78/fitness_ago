@@ -6,6 +6,7 @@ import scrollWindow from "./modules/scrollWindow";
 import slider from "./modules/slider";
 import photoGallery from "./modules/photoGallery";
 import carousel from "./modules/carousel";
+import calc from "./modules/calc";
 
 //выпадающее меню выбор клуба
 clubSelection();
@@ -24,3 +25,6 @@ photoGallery();
 
 // карусель 
 carousel();
+
+// калькулятор 
+calc();
