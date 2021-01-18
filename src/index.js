@@ -7,6 +7,7 @@ import slider from "./modules/slider";
 import photoGallery from "./modules/photoGallery";
 import carousel from "./modules/carousel";
 import calc from "./modules/calc";
+import popupMenu from "./modules/popupMenu";
 
 //выпадающее меню выбор клуба
 clubSelection();
@@ -28,3 +29,6 @@ carousel();
 
 // калькулятор 
 calc();
+
+// бургер меню
+popupMenu();

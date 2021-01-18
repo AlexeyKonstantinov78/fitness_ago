@@ -4,8 +4,6 @@ const scrollWindow = () => {
 
     totop.style.display = 'none';
     window.addEventListener('scroll', () => {
-        console.log(outerWidth);
-        console.log(window);
 
         if (pageYOffset > 181 && innerWidth < 768) {
             topMenu.style.position = 'fixed';
