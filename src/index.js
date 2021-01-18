@@ -8,6 +8,7 @@ import photoGallery from "./modules/photoGallery";
 import carousel from "./modules/carousel";
 import calc from "./modules/calc";
 import popupMenu from "./modules/popupMenu";
+import sendForm from "./modules/sendForm";
 
 //выпадающее меню выбор клуба
 clubSelection();
@@ -32,3 +33,6 @@ calc();
 
 // бургер меню
 popupMenu();
+
+// отправка форм
+sendForm();
