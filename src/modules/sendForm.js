@@ -155,7 +155,7 @@ const sendForm = () => {
     const removeTheThankYouText = (item) => {
         setTimeout(() => {
             if (statusMessage !== null) {
-                //item.removeChild(statusMessage);
+
                 statusMessage.remove();
             }
         }, 5000);
