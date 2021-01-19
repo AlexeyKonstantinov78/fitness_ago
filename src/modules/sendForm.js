@@ -154,7 +154,10 @@ const sendForm = () => {
     // очистка 
     const removeTheThankYouText = (item) => {
         setTimeout(() => {
-            item.removeChild(statusMessage);
+            if (statusMessage !== null) {
+                //item.removeChild(statusMessage);
+                statusMessage.remove();
+            }
         }, 5000);
     }
 
