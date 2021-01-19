@@ -29,7 +29,7 @@ const calc = () => {
 
                 priceTotal.textContent = item;
 
-                if (inputPromo.value.trim() === 'ТЕЛО2019') {
+                if (inputPromo.value.trim() === 'ТЕЛО2020') {
                     priceTotal.textContent = Math.floor(item * 0.70);
                 }
 
