@@ -6,12 +6,17 @@ const modalWindow = () => {
     const openFormModal = (id) => {
         const idForm = document.querySelector(id);
 
+
         idForm.style.display = 'inline';
 
         idForm.addEventListener('click', (event) => {
-            if (event.target.closest('.close-form')) idForm.style.display = '';
-            if (event.target.closest('.overlay')) idForm.style.display = '';
-            if (event.target.closest('.close-btn')) idForm.style.display = '';
+            if (event.target.closest('.close-form') || event.target.closest('.overlay') || event.target.closest('.close-btn')) idForm.style.display = '';
+
+            // if (event.target.closest('.btn.btn-send') && idForm.querySelector('.personal-data>input').checked && idForm.querySelector('.form-name').value != '' && idForm.querySelector('.form-phone').value != '') {
+            //     setTimeout(() => {
+            //         idForm.style.display = '';
+            //     }, 1000);
+            // }
         });
     }
 

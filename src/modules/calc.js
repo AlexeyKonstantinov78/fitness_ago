@@ -27,15 +27,23 @@ const calc = () => {
 
             prais.then((item) => {
 
-                if (inputPromo.value.trim() === '') {
-                    priceTotal.textContent = item;
-                } else {
-                    if (inputPromo.value.trim() === 'ТЕЛО2019') {
-                        priceTotal.textContent = Math.floor(item * 0.70);
-                    } else {
-                        priceTotal.textContent = item;
-                    }
+                priceTotal.textContent = item;
+
+                if (inputPromo.value.trim() === 'ТЕЛО2019') {
+                    priceTotal.textContent = Math.floor(item * 0.70);
                 }
+
+                // if (inputPromo.value.trim() === '') {
+                //     priceTotal.textContent = item;
+                // } else {
+                //     if (inputPromo.value.trim() === 'ТЕЛО2019') {
+                //         priceTotal.textContent = Math.floor(item * 0.70);
+                //     } else {
+                //         priceTotal.textContent = item;
+                //     }
+                // }
+
+
             });
 
         };
