@@ -122,17 +122,28 @@ const sendForm = () => {
         popupTranks.addEventListener('click', (event) => {
             const target = event.target;
 
-            const formConten = document.querySelector('#thanks>.form-wrapper>.form-content');
-
             if (target.closest('.close-form') || target.closest('.btn.close-btn') || target.closest('.overlay')) {
-                popupTranks.style.display = '';
-                if (formConten !== null) formConten.remove();
+                endPopup();
+
+                // popupTranks.style.display = '';
+                // if (formConten !== null) formConten.remove();
             }
 
             if (popupCall.style.display === 'inline') popupCall.style.display = '';
             if (popupFree.style.display === 'inline') popupFree.style.display = '';
         });
 
+        const endPopup = () => {
+            const formConten = document.querySelector('#thanks>.form-wrapper>.form-content');
+
+            popupTranks.style.display = '';
+            if (formConten !== null) formConten.remove();
+
+            if (popupCall.style.display === 'inline') popupCall.style.display = '';
+            if (popupFree.style.display === 'inline') popupFree.style.display = '';
+        };
+
+        setTimeout(() => endPopup(), 5000);
     }
 
     const inputVerifi = (item, form) => {
