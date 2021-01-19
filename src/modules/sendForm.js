@@ -126,9 +126,8 @@ const sendForm = () => {
 
             if (target.closest('.close-form') || target.closest('.btn.close-btn') || target.closest('.overlay')) {
                 popupTranks.style.display = '';
+                if (formConten !== null) formConten.remove();
             }
-
-            if (formConten !== null) formConten.remove();
 
             if (popupCall.style.display === 'inline') popupCall.style.display = '';
             if (popupFree.style.display === 'inline') popupFree.style.display = '';
